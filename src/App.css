@@ -1,38 +1,62 @@
-.App {
+@import '~antd/dist/antd.css';
+
+:root {
+  --navbar-height: 47px;
+  box-sizing: border-box;
+}
+
+
+.site-layout-content {
+  background: #fff;
+  padding: 24px;
+  min-height: 280px;
+}
+
+.header-fixed {
+  position: fixed; /* Set the navbar to fixed position */
+  width: 100%;
+  z-index: 1;
+}
+
+.layout-content-main {
+  padding-top: calc(var(--navbar-height) + 10px) ;
+}
+
+.dark-mode-switch {
+  margin: 10px;
+}
+
+.article {
+  padding: 5px;
+  min-width: 100vw;
+}
+
+.news--header {
+  padding: 5px;
+  text-align: center;
+  min-width: 100%;
+}
+
+.loading-text {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (min-width: 768px) {
+  .layout {
+    min-height: 100vh;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .layout-content-main {
+    padding: calc(var(--navbar-height) + 20px) 50px 0 50px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .dark-mode-switch {
+    margin: 10px;
+    float: right;
+  }
+  .article {
+    min-width: 1vw;
+  }
+
+  .news--header {
+    min-width: 50%;
   }
 }
