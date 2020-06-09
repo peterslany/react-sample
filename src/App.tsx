@@ -1,46 +1,49 @@
-import React from "react";
+import React, {useState} from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Home } from "./components/Home";
-import { Layout } from "antd";
+import { Layout, Card } from "antd";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import News from "./components/News";
 
-const RenderWithWhiteBG = (props) => {
-  return <div className="site-layout-content">{props.children}</div>;
+
+
+const RenderWithBG = (props) => {
+  return <Card className="site-layout-content">{props.children}</Card>;
 };
 
-function App() {
+function App(props) {
+  const [theme, setTheme] = useState("light");
   return (
-    <Layout className="layout">
-      <Header></Header>
+    <Layout className={"layout " + theme }>
+      <Header setTheme={setTheme} />
       <Layout.Content className="layout-content-main">
         <Switch>
           <Route
             path="/home"
             component={() => (
-              <RenderWithWhiteBG>
+              <RenderWithBG>
                 <Home />
-              </RenderWithWhiteBG>
+              </RenderWithBG>
             )}
           />
           <Route
             path="/about"
             component={() => (
-              <RenderWithWhiteBG>
+              <RenderWithBG>
                 <About />
-              </RenderWithWhiteBG>
+              </RenderWithBG>
             )}
           />
           <Route
             path="/contact"
             component={() => (
-              <RenderWithWhiteBG>
+              <RenderWithBG>
                 <Contact />
-              </RenderWithWhiteBG>
+              </RenderWithBG>
             )}
           />
           <Route path="/news" component={News} />
