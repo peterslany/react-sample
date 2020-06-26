@@ -19,9 +19,7 @@ export interface NewsProps {
 
 export interface NewsState {
   query: string;
-  page: number;
 }
-
 
 class News extends React.Component<NewsProps, NewsState> {
   renderArticles = () => {
@@ -58,7 +56,9 @@ class News extends React.Component<NewsProps, NewsState> {
       );
     return <>{articles}</>;
   };
-  state = { query: "Slovakia", page: 1 };
+
+  state = { query: this.props.articles.searchedWord };
+
   render() {
     return (
       <>
@@ -88,23 +88,24 @@ class News extends React.Component<NewsProps, NewsState> {
         <Pagination
           className="page-selector"
           showSizeChanger={false}
-          defaultCurrent={1}
-          current={this.state.page}
+          defaultCurrent={0}
+          current={
+            this.props.articles.articlesArray &&
+            this.props.articles.articlesArray.length > 0
+              ? this.props.articles.currentPage
+              : 0
+          }
           total={this.props.articles.totalPages}
           onChange={(value) => {
-            window.scrollTo({
-              top: 0
-            });
-            this.setState({ page: value });
             this.props.fetchArticles(this.state.query, value);
+            window.scrollTo({
+              top: 0,
+            });
           }}
         />
       </>
     );
   }
-  componentDidMount = () => {
-    this.props.fetchArticles(this.state.query, this.state.page);
-  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(News);

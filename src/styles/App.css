@@ -1,53 +1,13 @@
-@import '~antd/dist/antd.css';
+@import "~antd/dist/antd.css";
 :root {
   --navbar-height: 47px;
-
-  --dark-bg: #222222;
-  --dark-fg: #333333;
-  --dark-border: #444444;
-  --dark-text: #eeeeee;
-  --dark-heading: #ffffff;
-  --dark-shadow: #777777;
-  --primary-color: #1890ff;
 }
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-.dark *, .dark .ant-menu-item a {
-  color: var(--dark-text);
-  border-color: var(--dark-border);
-}
-.dark h1,.dark h2,.dark h3,.dark h4 {
-  color: var(--dark-heading);
-}
-
-.dark main, .dark .ant-layout-footer{
-  background-color: var(--dark-bg);
-}
-.dark .site-layout-content, .dark .article--card, .dark .ant-pagination-item ,
-.dark .ant-pagination a,
-.dark .ant-input, .dark .ant-menu, .ant-menu-dark .ant-menu { 
-  background-color: var(--dark-fg);
-  border-color: var(--dark-border);
-  color: var(--dark-text);
-}
-
-.dark .ant-menu {
-  border-bottom: 1px solid var(--dark-border);
-}
-.dark .article--card:hover {
-  box-shadow: 0 3px 10px var(--dark-shadow);
-}
-.dark .ant-pagination .ant-pagination-item-ellipsis {
-  color: var(--dark-text);
-}
-.dark .ant-pagination-item-active  {
-  border-color: var(--primary-color);
-}
 
 .site-layout-content {
-  
   padding: 24px;
   min-height: 280px;
 }
@@ -63,7 +23,7 @@
   justify-content: center;
 }
 .layout-content-main {
-  padding-top: calc(var(--navbar-height) + 10px) ;
+  padding-top: calc(var(--navbar-height) + 10px);
 }
 
 .dark-mode-switch {
@@ -93,8 +53,7 @@
   position: absolute;
   z-index: 1;
   left: 50%;
-  top:50%;
-
+  top: 50%;
 }
 
 .loading-text {
@@ -102,7 +61,6 @@
   left: -50%;
   top: -50%;
   text-align: center;
-
 }
 
 .page-selector {
@@ -114,7 +72,6 @@
   min-height: 100vh;
 }
 @media only screen and (min-width: 768px) {
-
   .layout-content-main {
     padding: calc(var(--navbar-height) + 20px) 50px 0 50px;
   }

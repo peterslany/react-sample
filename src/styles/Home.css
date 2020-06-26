@@ -1,0 +1,79 @@
+.illustration {
+  max-width: 100%;
+}
+.image {
+  max-width: 100%;
+}
+
+.image--right {
+  position: relative;
+  right: -30%;
+}
+
+.image--left {
+  position: relative;
+  left: -20%
+}
+.page-transition-fix {
+  position: relative;
+  top: -90%;
+}
+.text--right {
+  text-align: right;
+}
+
+.page-transition-fix--text {
+  position: relative;
+  top: -30%;
+}
+
+.position-mobile--higher {
+  position: relative;
+  top: -10%;
+}
+.position-mobile--lower {
+  position: relative;
+  top: -45%;
+  left: 10%;
+}
+@media only screen and (min-width:768px) {
+  .text {
+    max-width: 40%;
+
+  }
+  .image{
+    width: 50%
+  }
+  .text--left {
+    padding-left: 15%;
+  }
+  .text--right {
+    text-align: right;
+    position: relative;
+    right: -50%;
+  }
+  .image--right{ 
+    right: -40%;
+  }
+  .image--left {
+    padding-left: 10%;
+    left: 0%
+  }
+  .page-transition-fix {
+    top: -50%;
+  }
+  .page-transition-fix--text {
+    top: -20%;
+  }
+  .study--illustration {
+    width: 37%;
+  }
+  .position-mobile--higher {
+    top: 20%;
+  }
+  .position-mobile--lower {
+    position: relative;
+    top: -50%;
+    left: 50%
+  }
+}
