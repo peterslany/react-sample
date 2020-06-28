@@ -13,8 +13,10 @@ import {
 interface HomeState {
   scrollPosition: number;
 }
-
-export function Home(props: any) {
+interface HomeProps {
+  theme: string;
+}
+export function Home(props: HomeProps) {
   const [state, setState] = useState<HomeState>({
     scrollPosition: 0,
   });
@@ -37,8 +39,7 @@ export function Home(props: any) {
             className="home-main-bg-to-dark"
             style={{
               height: "400vh",
-              backgroundColor: `rgb(201, 222,  
-                ${state.scrollPosition / (2136 / 255)})`
+              background: `hsl(${state.scrollPosition / (2136 / 135) + 75}, ${props.theme === "dark" ? 50 : 30}% , ${props.theme === "dark" ? 45 : 80}% ) `
             }}
           />
         </ParallaxLayer>

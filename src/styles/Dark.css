@@ -20,9 +20,9 @@
   color: var(--dark-heading);
 }
 
-.dark main,
-.dark .ant-layout-footer {
+.dark .ant-layout-footer, .dark.ant-layout {
   background-color: var(--dark-bg);
+
 }
 .dark .site-layout-content,
 .dark .article--card,

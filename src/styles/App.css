@@ -1,6 +1,7 @@
 @import "~antd/dist/antd.css";
 :root {
   --navbar-height: 47px;
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
@@ -85,5 +86,34 @@
 
   .news--header {
     min-width: 50%;
+  }
+
+  /* Transition is just for desktop*/
+  .fade-enter {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  .fade-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 500ms;
+  }
+  .fade-exit {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .fade-exit-active {
+    transform: translateX(-100vw);
+    opacity: 0;
+    transition: all 500ms;
+  }
+
+  .transition-container {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 }
