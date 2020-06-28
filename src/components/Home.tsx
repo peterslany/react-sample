@@ -39,11 +39,11 @@ export function Home(props: HomeProps) {
             className="home-main-bg-to-dark"
             style={{
               height: "400vh",
-              background: `hsl(${state.scrollPosition / (2136 / 135) + 75}, ${props.theme === "dark" ? 50 : 30}% , ${props.theme === "dark" ? 45 : 80}% ) `
+              background: `hsl(${state.scrollPosition / (2136 / 135) + 75}, ${props.theme === "dark" ? 15 : 30}% , ${props.theme === "dark" ? 45 : 80}% ) `
             }}
           />
         </ParallaxLayer>
-        <ParallaxLayer offset={0.2}>
+        <ParallaxLayer offset={0.1}>
           <Typography.Title style={{ textAlign: "center" }}>
             Welcome to my webpage!
           </Typography.Title>
@@ -61,7 +61,7 @@ export function Home(props: HomeProps) {
         <ParallaxLayer offset={1.2} speed={0.6}>
           <div className="image image--left page-transition-fix">{Travel}</div>
         </ParallaxLayer>
-        <ParallaxLayer offset={1.2} speed={0.4}>
+        <ParallaxLayer offset={1.25} speed={0.4}>
           <div className="text text--right page-transition-fix--text">
             <Typography.Title>Then I moved to Brno.</Typography.Title>
           </div>
@@ -82,7 +82,7 @@ export function Home(props: HomeProps) {
         <ParallaxLayer offset={2.15} speed={0.7}>
           <div className="image image--left">{Phone}</div>
         </ParallaxLayer>
-        <ParallaxLayer offset={2.25} speed={0.4}>
+        <ParallaxLayer offset={2.3} speed={0.4}>
           <div className="text text--right position-mobile--higher">
             <Typography.Title>
               Right now I am creating startup with my friend.

@@ -87,8 +87,9 @@
   .news--header {
     min-width: 50%;
   }
+}
 
-  /* Transition is just for desktop*/
+  /* Transition*/
   .fade-enter {
     opacity: 0;
     transform: translateX(100vw);
@@ -116,4 +117,3 @@
     bottom: 0;
     right: 0;
   }
-}
