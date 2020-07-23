@@ -33,23 +33,24 @@ export const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
   });
   return (
     <div className="header-fixed">
-      <Menu theme={state.colorTheme} mode="horizontal" className="header-menu">
+      <Menu theme={state.colorTheme} mode="horizontal" className="header-menu" selectable={false}>
         <Menu.Item key="1">
           <HomeOutlined />
           <Link to="/home">Home</Link>
-        </Menu.Item>
-        <Menu.Item key="2">
-          <InfoCircleOutlined />
-          <Link to="/about">About me</Link>
-        </Menu.Item>
-        <Menu.Item key="3">
-          <ContactsOutlined />
-          <Link to="/contact">Contact</Link>
         </Menu.Item>
         <Menu.Item key="4">
           <NotificationOutlined />
           <Link to="/news">News</Link>
         </Menu.Item>
+        <Menu.Item key="2">
+          <InfoCircleOutlined />
+          <Link to="/about">About this</Link>
+        </Menu.Item>
+        <Menu.Item key="3">
+          <ContactsOutlined />
+          <Link to="/contact">Contact</Link>
+        </Menu.Item>
+
         <Switch
           className="dark-mode-switch"
           checkedChildren="Dark Mode"

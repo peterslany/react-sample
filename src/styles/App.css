@@ -16,7 +16,7 @@
 .header-fixed {
   position: fixed; /* Set the navbar to fixed position */
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header-menu {
@@ -25,6 +25,7 @@
 }
 .layout-content-main {
   padding-top: calc(var(--navbar-height) + 10px);
+  background-color: #f0f2f5;
 }
 
 .dark-mode-switch {
@@ -89,31 +90,31 @@
   }
 }
 
-  /* Transition*/
-  .fade-enter {
-    opacity: 0;
-    transform: translateX(100vw);
-  }
-  .fade-enter-active {
-    transform: translateX(0);
-    opacity: 1;
-    transition: all 500ms;
-  }
-  .fade-exit {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  .fade-exit-active {
-    transform: translateX(-100vw);
-    opacity: 0;
-    transition: all 500ms;
-  }
+/* Transition*/
+.fade-enter {
+  opacity: 0;
+  transform: translateX(100vw);
+}
+.fade-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 500ms;
+}
+.fade-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+.fade-exit-active {
+  transform: translateX(-100vw);
+  opacity: 0;
+  transition: all 500ms;
+}
 
-  .transition-container {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  }
+.transition-container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

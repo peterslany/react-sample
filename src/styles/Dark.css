@@ -6,10 +6,11 @@
   --dark-heading: #ffffff;
   --dark-shadow: #777777;
   --primary-color: #1890ff;
+  --primary-color--lighter:#7bbefd;
 }
-.dark *,
-.dark .ant-menu-item a,
-.dark div {
+
+.dark *
+{
   color: var(--dark-text);
   border-color: var(--dark-border);
 }
@@ -20,7 +21,7 @@
   color: var(--dark-heading);
 }
 
-.dark .ant-layout-footer, .dark.ant-layout {
+.dark .ant-layout-footer, .dark.ant-layout, .dark .ant-layout-content {
   background-color: var(--dark-bg);
 
 }
@@ -51,4 +52,23 @@
 
 .dark .home-main-bg-to-dark {
     background-color: var(--dark-bg);
+}
+
+.dark .ant-list-item{
+  border-color: var(--dark-border);
+}
+
+.dark .list-item *{
+  color: var(--primary-color);
+}
+
+.dark .list-item:hover *{
+  color: var(--primary-color--lighter);
+  background-color: rgb(44, 44, 44);
+}
+.dark * a {
+  color:var(--primary-color);
+}
+.dark * a:hover{
+  color:var(--primary-color--lighter);
 }

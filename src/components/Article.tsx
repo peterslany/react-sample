@@ -5,8 +5,8 @@ const { Title } = Typography;
 
 const parseDate = (date) => {
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-  const d = new Date (date);
-  return d.getDate() + " " + months[d.getMonth()] + ", " + d.getFullYear();
+  const result = new Date (date);
+  return result.getDate() + " " + months[result.getMonth()] + ", " + result.getFullYear();
 }
 
 export default function Article(props) {
