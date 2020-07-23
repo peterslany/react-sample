@@ -33,6 +33,7 @@ export default function About() {
             <Divider />
             <ul>
                 <li>React (+ React Spring for parallax, React Transition Group for transitions)</li>
+                <li>Typescript</li>
                 <li>Ant Design CSS framework for faster styling</li>
                 <li>Redux for state management</li>
                 <li>Docker for containerization</li>

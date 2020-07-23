@@ -18,7 +18,6 @@ const RenderWithBG = (props) => {
 const renderInLayout = (props) => {
   return (
     <>
-      {" "}
       <Layout.Content className="layout-content-main">{props}</Layout.Content>
       <Layout.Footer style={{ textAlign: "center" }}>
         ©2020 Peter Slany
