@@ -39,9 +39,11 @@ const fadeTransition = (component) => ({ match }) => (
 function App(props) {
   const [theme, setTheme] = useState("light");
   // fetch articles for news section
+  const fetchArticles = props.fetchArticles;
+  const searchedWord = props.searchedWord;
   useEffect(() => {
-    props.fetchArticles(props.articles.searchedWord, 1);
-  });
+    fetchArticles(searchedWord, 1);
+  }, [fetchArticles, searchedWord]);
   return (
     <Layout className={"layout " + theme}>
       <Header setTheme={setTheme} />

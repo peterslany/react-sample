@@ -4,7 +4,7 @@ export const fetchArticles = (query: string, page: number) => async (
   dispatch: any
 ) => {
   dispatch(articlesAreLoading(query));
-  await fetch("http://localhost:3030/articles?q=" + query + "&page=" + page)
+  await fetch("https://peterslany.herokuapp.com/articles?q=" + query + "&page=" + page)
     .then(async (response) => {
       if (!response.ok) {
         dispatch(articlesLoadingError());
