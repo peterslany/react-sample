@@ -41,7 +41,7 @@ function App(props) {
   // fetch articles for news section
   useEffect(() => {
     props.fetchArticles(props.articles.searchedWord, 1);
-  }, []);
+  });
   return (
     <Layout className={"layout " + theme}>
       <Header setTheme={setTheme} />
