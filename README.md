@@ -1,4 +1,4 @@
-# This is just front-end part of this app - make sure to check [root repository too!](https://raw.githubusercontent.com/peterslany/react-sample-rest)
+# This is just front-end part of this app - make sure to check [root repository too!](https://github.com/peterslany/react-sample-rest)
 [![image.png](https://i.postimg.cc/mDdbxZY4/image.png)](https://react-sample-app.netlify.app/)
 ## See it live [here](https://react-sample-app.netlify.app/).
 
