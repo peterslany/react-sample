@@ -85,7 +85,7 @@ export function Home(props: HomeProps) {
         <ParallaxLayer offset={2.3} speed={0.4}>
           <div className="text text--right position-mobile--higher">
             <Typography.Title>
-              Right now I am creating startup with my friend.
+              Right now I am creating an app with my friend.
             </Typography.Title>
           </div>
         </ParallaxLayer>
