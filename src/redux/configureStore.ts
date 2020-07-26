@@ -1,6 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk  from 'redux-thunk';
-import logger from 'redux-logger';
 import { Articles } from './reducers/articles';
 
 export const ConfigureStore = () => {
@@ -8,7 +7,7 @@ export const ConfigureStore = () => {
         combineReducers({
             articles: Articles,
         }),
-        applyMiddleware(thunk, logger)
+        applyMiddleware(thunk)
     );
     
     return store;
